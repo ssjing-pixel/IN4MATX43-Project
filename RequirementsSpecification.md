@@ -1,9 +1,9 @@
 Title:
 Team Members:
-Gisele Dao, gbdao
-Jenny Huang, yuxuah27
-Stephanie Jing, ssjing
-Elaine Kao, eakao
+- Gisele Dao, gbdao
+- Jenny Huang, yuxuah27
+- Stephanie Jing, ssjing
+- Elaine Kao, eakao
 
 Executive Summary:
 
