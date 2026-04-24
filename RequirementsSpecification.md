@@ -1,7 +1,7 @@
 Title:
 Team Members:
 - Gisele Dao, gbdao
-- Jenny Huang, yuxuah27
+- Jenny Tong, xinchant
 - Stephanie Jing, ssjing
 - Elaine Kao, eakao
 
