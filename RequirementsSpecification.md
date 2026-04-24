@@ -6,9 +6,9 @@ Team Members:
 - Elaine Kao, eakao
 
 Executive Summary:
-CommonGround is a web-based social discovery platform that helps users meet new people in real life based on shared interests, hobbies, and activities. Unlike traditional friend-location apps that rely on existing contacts, CommonGround matches users with nearby strangers who voluntarily join the platform and opt in to location sharing. The platform is designed for students, young adults, travelers, and hobby communities seeking spontaneous real-world social connection.
-Users create profiles, complete an onboarding quiz, and select interests such as fitness, gaming, anime, art, coding, music, sports, or food exploration. The system then identifies nearby compatible users and enables interaction through a request-match-accept model before location visibility or chat access is granted.
-Key features include live friend-finding maps, profile browsing, in-browser messaging, gamified missions with reward points, and personalized onboarding. CommonGround aims to reduce loneliness, increase community engagement, and make meeting like-minded people easier while maintaining user privacy and consent.
+CommonGround is a web-based social platform designed to help users make new friends through shared interests, local discovery, and gamified social interaction. Many people want to meet others with similar hobbies but struggle to initiate friendships in real life. CommonGround solves this problem by turning friendship-building into an engaging experience through missions and rewards.
+Users create profiles, complete an onboarding quiz, and choose interests such as gaming, fitness, music, anime, coding, sports, or art. The website then recommends nearby compatible users and encourages interaction through fun tasks like starting conversations, attending meetups, or completing group challenges.
+Rather than focusing only on geolocation, CommonGround emphasizes motivation and connection. Users earn points, badges, streaks, and achievements for participating socially and building friendships. Core features include profile creation, friend matching, in-site chat, missions, and a live friends tab. The goal is to reduce loneliness, increase confidence, and make meeting new people feel rewarding and enjoyable.
 
 Application Context / Environmental Constraints:
 
