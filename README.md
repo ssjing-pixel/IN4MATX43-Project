@@ -1,14 +1,24 @@
 # IN4MATX43-Project Meeting Documentation
 
+Meeting #3
+Attendees: Elaine Kao, Gisele Dao, Stephanie Jing, Xinchang Tong
+Absent: Yuxuan Huang
+Date: 4/24/26
+Type: In-Person
+Location: Friday Discussion Section Week 4
+Summary: ...
+
 Meeting #2
-Attendees: Elaine, Gisele, Jenny, Stephanie
+Attendees: Elaine Kao, Gisele Dao, Stephanie Jing, Xinchang Tong
+Absent: Yuxuan Huang
 Date: 4/17/26
 Type: In-Person
 Location: Friday Discussion Section Week 3
 Summary: Created a private git repository and shared it between all 4 group members. Also shared git repository with TA Hang Du, Professor Jones, and 2 readers. Added Jenny to our Messages groupchat. Created READ_MEs in git repository for the project meeting documentation and requirements specifications document.
 
 Meeting #1
-Attendees: Elaine, Gisele, Stephanie
+Attendees: Elaine Kao, Gisele Dao, Stephanie Jing
+Absent: Yuxuan Huang
 Date: 4/10/26
 Type: In-Person
 Location: Friday Discussion Section Week 2
