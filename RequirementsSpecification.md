@@ -1,5 +1,4 @@
-Title: Find My Friends
-
+Title: CommonGround
 Team Members:
 - Gisele Dao, gbdao
 - Jenny Tong, xinchant
