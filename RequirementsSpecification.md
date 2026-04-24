@@ -1,4 +1,5 @@
-Title:
+Title: Find My Friends
+
 Team Members:
 - Gisele Dao, gbdao
 - Jenny Tong, xinchant
