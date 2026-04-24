@@ -17,5 +17,8 @@ Functional Requirements:
 Functional Requirements Analyses (5 Features, 2 New Features):
 - user bio
 - user profile
+- chat with matching users
+- missions and point system
+- onboarding quiz
 
 Use Cases (for each feature):
