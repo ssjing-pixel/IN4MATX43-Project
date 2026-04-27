@@ -1,12 +1,20 @@
 # IN4MATX43-Project Meeting Documentation
 
+Meeting #4
+Attendees: Elaine Kao, Gisele Dao, Stephanie Jing, Xinchang Tong
+Absent: Yuxuan Huang
+Date: 4/27/26, 12pm
+Type: Online
+Location: Facetime
+Summary: ...
+
 Meeting #3
 Attendees: Elaine Kao, Gisele Dao, Stephanie Jing, Xinchang Tong
 Absent: Yuxuan Huang
 Date: 4/24/26
 Type: In-Person
 Location: Friday Discussion Section Week 4
-Summary: ...
+Summary: We filled out our project's quick overview presentation slide, with a marking hook and elevator pitch. We also decided on the key features which we would implement in our project, including an intro quiz, a mission/point system, user profile, and chat box. We also came up with our project's name CommonGround and created an executieve summary for our project's requirement specification document.
 
 Meeting #2
 Attendees: Elaine Kao, Gisele Dao, Stephanie Jing, Xinchang Tong
