@@ -6,7 +6,7 @@ Absent: Yuxuan Huang
 Date: 4/27/26, 12pm
 Type: Online
 Location: Facetime
-Summary: ...
+Summary: We all agree on the foundational aspects of our project, including key features and what our main goals/values. We decided to focus on the "game" aspect in the creation of our online tool to motivate people to join and have fun. With foundations agreed upon, we split up the requirements document parts among the four of us; everyone is filling out 2 functional requirements, except for Stephanie who is also editing the executive summary and Gisele who is doing 1 functional requirement and the application context.
 
 Meeting #3
 Attendees: Elaine Kao, Gisele Dao, Stephanie Jing, Xinchang Tong
@@ -14,7 +14,7 @@ Absent: Yuxuan Huang
 Date: 4/24/26
 Type: In-Person
 Location: Friday Discussion Section Week 4
-Summary: We filled out our project's quick overview presentation slide, with a marking hook and elevator pitch. We also decided on the key features which we would implement in our project, including an intro quiz, a mission/point system, user profile, and chat box. We also came up with our project's name CommonGround and created an executieve summary for our project's requirement specification document.
+Summary: We filled out our project's quick overview presentation slide, with a marketing hook and elevator pitch. We also decided on the key features which we would implement in our project, including an intro quiz, a mission/point system, user profile, and chat box. We also came up with our project's name CommonGround and created an executive summary for our project's requirement specification document.
 
 Meeting #2
 Attendees: Elaine Kao, Gisele Dao, Stephanie Jing, Xinchang Tong
