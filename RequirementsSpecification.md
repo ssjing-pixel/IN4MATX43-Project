@@ -117,3 +117,74 @@ Exceptional
 2. No one shows up on their map and system notifies them and gives suggestion to change filter
 3. User A rejects the suggestion and takes no action
 4. System continues to run until someone with those interests show up
+
+Functional Requirement #6 (our unique feature): Missions
+The system shall include a Missions system which is a set of in-app challenges that reward users with points for engaging in real-world social interactions facilitated by the app.
+
+Missions will be divided into the following tiers:
+   - Starter Missions (one-time, for new users): “Complete your profile,” “Accept your first chat request,” etc.
+   - Daily Missions: “Open the app and enable location sharing,” “Send a chat request today.”
+   - Milestone Missions: “Make your first friend,” “Chat with 5 different users,” “Join your first interest group.”
+
+Points earned shall accumulate on the user’s profile and be visible to other users. Points are a social signal and there are no monetary rewards or premium features tied to points. Users shall be able to view their current missions and progress from a dedicated Missions page accessible from the main navigation. The system shall display a points award notification when a mission is completed. A leadership showing the top 10 point-earners among a user’s Friends list shall be accessible from the Missions page.
+
+Pros: Missions provide motivation for new users and encourage continued engagement. The friends-only leaderboard encourages friendly competition within a trusted group rather than creating an app-wide status hierarchy that could feel exclusionary or gamified in unhealthy ways.
+
+Cons: Gamification can shift user motivation from genuine social connection to point-farming, leading to low-quality or performative interactions. Some missions may inadvertently pressure users to share their location even when they would prefer not to, which runs counter to the app’s privacy commitments. Users who are naturally more introverted or privacy-conscious may find missions stressful rather than motivating. 
+
+Mission design must carefully avoid any framing that implies there is a “wrong” way to use the app or that low-scoring users are less valuable members of the community. Points are purely social. The system should ensure that missions never require users to share private information or accept interactions they are not comfortable with to earn points.
+
+Use Case - Basic Flow:
+   1. User A receives and accepts a chat request from User B.
+   2. The system detects that this is User A’s first accepted chat request.
+   3. A congratulatory notification is displayed, awarding User A 10 points and marking the Starter Mission as complete.
+   4. The points total on User A’s profile is updated.
+   5. User A navigates to the Missions page and sees the completed mission marked with a checkmark, plus a list of next suggested missions. 
+
+Use Case - Alternative Flow:
+   1. User A navigates to the Missions page and taps “Friends Leaderboard.”
+   2. The system displays the top 10 point-earners among User A’s friends, sorted by total points.
+   3. User A’s own rank within their friends list is highlighted.
+
+Use Case - Exceptional Flow:
+   1. User A completes the conditions for a Daily Mission but loses internet connection before the completion is recorded.
+   2. When User A reconnects, the system retroactively checks mission completion status based on the server-side activity log.
+   3. If the conditions were met during the offline period, the mission is awarded upon reconnection with a delayed congratulatory       notification.
+
+
+Functional Requirement #7 (our unique feature): Onboarding Quiz
+New users will select their interests from a curated list of categories and subcategories during a guided onboarding page. Free-text tags are not supported. The interest list will be presented as a visual grid of selectable tiles. Each tile includes an icon and a short label. Selected tiles are highlighted. Users must select a minimum of 1 and a maximum of 10 interests. The system shall use the user’s selected interests to determine map visibility and chat request eligibility.
+
+Pros:
+A predefined list significantly reduces the risk of users creating harmful, harassing, or offensive interest tags.
+Predefined categories make the match algorithm simple and reliable.
+The structured quiz format makes the onboarding experience feel intentional and friendly.
+Cons:
+A predefined list cannot cover every hobby and interest, and some users may feel the app does not represent them.
+The list requires ongoing maintenance by the development team to stay relevant.
+Highly specific niche interests (which are often the most passionate communities) may not appear, losing the users who would benefit most from the app.
+
+The team should be intentional about ensuring the list is inclusive across different backgrounds, ages, and subcultures. A feedback mechanism allows users to suggest new interest, but the team must be transparent about how submissions are reviewed and why some may be declined.
+
+Use Case - Basic Flow:
+   1. The system presents the onboarding quiz, beginning with the display name and photo step.
+   2. The user enters a display name and skips the photo upload.
+   3. The system advances to the interest selection step and displays a visual grid of interest tiles organized by category.
+   4. The user selects 4 interest tiles: “Hiking,” “Photography,” “Board Games,” and “Cooking.”
+   5. Selected tiles are highlighted and a counter shows “4/10 selected.”
+   6. The user taps “Continue.”
+   7. The system advances to the proximity range step, then completes onboarding and navigates to the map.
+   8. The map immediately displays pins for nearby users who share at least one of the user’s four selected interests.
+
+Use Case - Alternative Flow:
+   1. An existing user navigates to Settings → My Interests.
+   2. The system displays the full interest grid with the user’s currently selected interests highlighted.
+   3. The user deselects “Cooking” and adds “Guitar.”
+   4. The user taps “Save.”
+   5. The system updates the user’s interest profile and the map is refreshed to reflect the new matching criteria.
+
+Use Case - Exceptional Flow:
+   1. The user has already selected 10 interests and taps an 11th tile.
+   2. The tile does not become selected.
+   3. The system displays a pop-up banner: “You’ve reached the 10-interest limit. Deselect an interest to add a new one.”
+   4. The user deselects one tile, then successfully selects the new one.
