@@ -48,29 +48,55 @@ Exceptional
 3. Server issue causes message to not be sent, User A receives error message
 4. User A tries again later and succeeds or User B goes out of range and User A can no longer send a message request
 
+Functional Requirement #2: range
+Analysis: The user chooses their desired range where the default range is a radius of 1 mile, but users can input whichever number they want to set as their range and can change it whenever they want in the settings. Users with similar tags will be notified only when others fall within their own radius specifically. Users can then choose to chat with users within their range. User location is updated every 30 seconds and based on their settings other users in range will be notified. Users cannot see the exact location or distance of other users, only whether they fall in range or not. In addition, user location will not be permanently stored for user privacy. Users can choose to go invisible any time they want for privacy and any when invisible, even if one is in another's range, they cannot view that person.
+Pros:
+- Users have control over the area where they want to be discovered
+- Invisibility can give users privacy at home or work
+- Flexibility in the range can allow users to expand or shrink their range for different situations (eg. city compared to rural areas)
+Cons:
+- Mismatching ranges as in the alternative flow can be unintuitive and unethical when one user can see someone but the other cannot
+- Updating every 30 seconds can be a little slow for live locations
+Use cases:
+Basic
+1. User A and B opens the app
+2. User A and User B are at the same hiking trail 0.5 miles apart
+3. User A’s set range is 2 miles and User B’s set range is 1 mile so the system updates
+4. Both users see there is a nearby #hiking lover and can chat
+Alternative
+1. User A and B opens the app
+2. User A and User B are both in the #gaming tag 3 miles apart
+3. User A’s range is set at 5 miles and User B’s is only 1.5 miles
+4. User A can see User B is also a #gaming fan, but User B cannot see User A
+5. User A can send a chat request to User B
+Exceptional
+1. User A and B opens the app
+2. User A and User B are both under #guitar and are 0.5 miles apart
+3. Both users’ ranges are set to 1 mile
+4. User A decides to go invisible
+5. User B cannot see User A
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Functional Requirement #3: user-defined filtering
+Analysis: Users can apply filtering criteria to control which users show up on their map. Users can choose to filter by tags and can choose to filter my specific tags. For example, a user can choose to filter all nearby users by tags #hiking and #gym and only users with both tags will show up. If there are no users with interests in the filter the system will notify the user and suggest they change their filter. These filters will persist across sections until the user decides to change it. This can be changed on the main screen of CommonGround by pressing buttons.
+Pros:
+- Users can choose to have more in common with others on their map
+- Users only have to configure settings once and can change whenever they want
+- Easy as the user only has to click buttons
+Cons:
+- Being too specific can cause the user to have no one matching with them
+- May be too complex and crowded on the UI reducing the simplicity of the app
+Use cases:
+Basic
+1. User A selects #cycling and #guitar as their filter
+2. User B is in User A’s range and also has #cycling and #guitar
+3. User B shows up on User A’s map
+Alternative
+1. User A selects #hiking, #gaming, #coffee, and #baking as their filter
+2. No one shows up on their map
+3. User A changes it to #coffee and #baking
+4. User B and User C shows up on User A’s map as they both have #coffee and #baking
+Exceptional
+1. User A selects #bouldering and #fashion as their filter
+2. No one shows up on their map and system notifies them and gives suggestion to change filter
+3. User A rejects the suggestion and takes no action
+4. System continues to run until someone with those interests show up
