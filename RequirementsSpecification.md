@@ -17,6 +17,7 @@ The more behind-the-scenes software of our product includes a browser to host th
 **Functional Requirements:**
 
 Functional Requirement #1: chat
+
 Analysis: The user can begin a chat with anyone else on the website after chat requests have been sent, received, and accepted. Chats consist of messages sent back and forth. The chat option only becomes available if other users fall within the primary user’s desired range and have similar tags. Once a chat is accepted between users, the chat is saved and users can return back to the chat even if the range/tag conditions aren’t met.
 Pros:
 - Users are able to connect with other users; meaningful conversations
@@ -34,6 +35,7 @@ Basic
 3. User B accepts request
 4. Chat window opens
 5. Messages are sent back and forth
+
 Alternative
 1. User A browses matching tagged users in range
 2. User A sends chat request to User B
@@ -42,6 +44,7 @@ Alternative
 5. User B finally accepts a day later
 6. Chat window opens
 7. Messages are send back and forth
+
 Exceptional
 1. User A browses matching tagged users in range
 2. User A sends chat request to User B
@@ -49,6 +52,7 @@ Exceptional
 4. User A tries again later and succeeds or User B goes out of range and User A can no longer send a message request
 
 Functional Requirement #2: range
+
 Analysis: The user chooses their desired range where the default range is a radius of 1 mile, but users can input whichever number they want to set as their range and can change it whenever they want in the settings. Users with similar tags will be notified only when others fall within their own radius specifically. Users can then choose to chat with users within their range. User location is updated every 30 seconds and based on their settings other users in range will be notified. Users cannot see the exact location or distance of other users, only whether they fall in range or not. In addition, user location will not be permanently stored for user privacy. Users can choose to go invisible any time they want for privacy and any when invisible, even if one is in another's range, they cannot view that person.
 Pros:
 - Users have control over the area where they want to be discovered
@@ -58,17 +62,20 @@ Cons:
 - Mismatching ranges as in the alternative flow can be unintuitive and unethical when one user can see someone but the other cannot
 - Updating every 30 seconds can be a little slow for live locations
 Use cases:
+
 Basic
 1. User A and B opens the app
 2. User A and User B are at the same hiking trail 0.5 miles apart
 3. User A’s set range is 2 miles and User B’s set range is 1 mile so the system updates
 4. Both users see there is a nearby #hiking lover and can chat
+   
 Alternative
 1. User A and B opens the app
 2. User A and User B are both in the #gaming tag 3 miles apart
 3. User A’s range is set at 5 miles and User B’s is only 1.5 miles
 4. User A can see User B is also a #gaming fan, but User B cannot see User A
 5. User A can send a chat request to User B
+
 Exceptional
 1. User A and B opens the app
 2. User A and User B are both under #guitar and are 0.5 miles apart
