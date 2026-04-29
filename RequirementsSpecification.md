@@ -86,15 +86,18 @@ Cons:
 - Being too specific can cause the user to have no one matching with them
 - May be too complex and crowded on the UI reducing the simplicity of the app
 Use cases:
+
 Basic
 1. User A selects #cycling and #guitar as their filter
 2. User B is in User A’s range and also has #cycling and #guitar
 3. User B shows up on User A’s map
+
 Alternative
 1. User A selects #hiking, #gaming, #coffee, and #baking as their filter
 2. No one shows up on their map
 3. User A changes it to #coffee and #baking
 4. User B and User C shows up on User A’s map as they both have #coffee and #baking
+   
 Exceptional
 1. User A selects #bouldering and #fashion as their filter
 2. No one shows up on their map and system notifies them and gives suggestion to change filter
