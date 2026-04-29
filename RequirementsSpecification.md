@@ -141,7 +141,7 @@ Cons:
 
 Use cases:
 
-Basic:
+Basic
 1. User signs up for the app
 2. The system prompts the users to create a profile
 3. User enters required information (e.g., name, age, interests)
@@ -149,12 +149,12 @@ Basic:
 5. The system validates and saves the profile information
 6. The profile is displayed to other matched users
 
-Alternative:
+Alternative
 1. User skips optional fields (e.g., profile picture)
 2. The system creates a partial profile
 3. The system allows the user to continue matching with limited data
 
-Exceptional:
+Exceptional
 1. User enters invalid or missing required information
 2. The system detects the error
 3. The system displays an error message
@@ -179,18 +179,18 @@ Cons:
 
 Use cases:
 
-Basic:
+Basic
 1. User opens profile settings
 2. User writes a short bio
 3. User saves the bio
 4. The system displays the bio on the user profile
 
-Alternative:
+Alternative
 1. Users edit their bios after creating them
 2. The system updates the bio
 3. The updated bio is displayed
 
-Exceptional:
+Exceptional
 1. User exceeds the allowed character limit
 2. The system detects the issue
 3. The system displays an error message
@@ -217,19 +217,19 @@ Cons:
 
 Use Cases:
 
-Basic:
+Basic
 1. User A receives and accepts a chat request from User B.
 2. The system detects that this is User A’s first accepted chat request.
 3. A congratulatory notification is displayed, awarding User A 10 points and marking the Starter Mission as complete.
 4. The points total on User A’s profile is updated.
 5. User A navigates to the Missions page and sees the completed mission marked with a checkmark, plus a list of next suggested missions. 
 
-Alternative:
+Alternative
 1. User A navigates to the Missions page and taps “Friends Leaderboard.”
 2. The system displays the top 10 point-earners among User A’s friends, sorted by total points.
 3. User A’s own rank within their friends list is highlighted.
 
-Exceptional:
+Exceptional
 1. User A completes the conditions for a Daily Mission but loses internet connection before the completion is recorded.
 2. When User A reconnects, the system retroactively checks mission completion status based on the server-side activity log.
 3. If the conditions were met during the offline period, the mission is awarded upon reconnection with a delayed congratulatory  notification.
@@ -252,7 +252,7 @@ Highly specific niche interests (which are often the most passionate communities
 
 Use Cases:
 
-Basic:
+Basic
 1. The system presents the onboarding quiz, beginning with the display name and photo step.
 2. The user enters a display name and skips the photo upload.
 3. The system advances to the interest selection step and displays a visual grid of interest tiles organized by category.
@@ -262,14 +262,14 @@ Basic:
 7. The system advances to the proximity range step, then completes onboarding and navigates to the map.
 8. The map immediately displays pins for nearby users who share at least one of the user’s four selected interests.
 
-Alternative:
+Alternative
 1. An existing user navigates to Settings → My Interests.
 2. The system displays the full interest grid with the user’s currently selected interests highlighted.
 3. The user deselects “Cooking” and adds “Guitar.”
 4. The user taps “Save.”
 5. The system updates the user’s interest profile and the map is refreshed to reflect the new matching criteria.
 
-Exceptional:
+Exceptional
 1. The user has already selected 10 interests and taps an 11th tile.
 2. The tile does not become selected.
 3. The system displays a pop-up banner: “You’ve reached the 10-interest limit. Deselect an interest to add a new one.”
