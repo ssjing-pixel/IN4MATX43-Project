@@ -159,6 +159,7 @@ Pros:
 A predefined list significantly reduces the risk of users creating harmful, harassing, or offensive interest tags.
 Predefined categories make the match algorithm simple and reliable.
 The structured quiz format makes the onboarding experience feel intentional and friendly.
+
 Cons:
 A predefined list cannot cover every hobby and interest, and some users may feel the app does not represent them.
 The list requires ongoing maintenance by the development team to stay relevant.
