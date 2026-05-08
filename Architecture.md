@@ -2,6 +2,7 @@
 
 
 **Platforms**
+
 Our frontend will run on web browsers like Google Chrome, Safari, etc. and it’s framework will use React running within a Node.js development environment. The benefit of a website-based fronten is accessibility; almost every device has access to the internet and a website and our product doesn’t require downloading of any type as an app would. The tradeoff is that websites have less access to device hardware compared to apps and sometimes browser-based geolocation is less accurate. However, we hope to combat this with our use of the Google Maps API, which is industry standard and one of the best geolocation programs.
 
 The backend server will run on cloud infrastructure such as AWS EC2, AWS Elastic Beanstalk, or Google Cloud Platform using a Node.js runtime environment. The benefit of using cloud infrastructure is that it is extremely scalable, aka it can handle the future potential growth of our user base. Moreover, it has a level of built-in security and efficiency. The tradeoff is that cloud hosting means overhead costs on the host platform and potentially more hoops to jump through to deploy our product.
@@ -12,6 +13,7 @@ The messaging system will run on WebSocket-compatible cloud servers. The benefit
 
 
 **Programming Languages**
+
 The frontend portion of our app will use React and TypeScript. This allows users to interact with the map, live chat, and interest grid directly in their browser without full page reloads.
 Benefits:
 CommonGround's UI sections (map, chat, profile, missions, etc.) can be built and tested independently and composed together
