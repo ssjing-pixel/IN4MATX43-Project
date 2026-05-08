@@ -31,28 +31,34 @@ Trade offs:
 - Browser-based location is sometimes less accurate than native app location services. We intend to mitigate this with the Google Maps API
 
 The backend of the website will run on cloud infrastructure such as AWS EC2, AWS Elastic Beanstalk, or Google Cloud Platform using a Node.js runtime environment.
+
 Benefits:
 - Cloud infrastructure is highly scalable. As CommonGround's user base grows beyond UCI, the backend can be scaled up to handle increased load without a fundamental architectural change
 - Cloud platforms provide built-in security features and reliability guarantees such as uptime SLAs, distributed access, automatic failovers, that would be difficult and time-consuming for a student team to replicate on self-hosted infrastructure
 - Node.js is event-driven and non-blocking, making it well-suited to CommonGround's two most demanding backend tasks: handling many simultaneous - WebSocket connections for real-time chat, and processing frequent location updates from many active users concurrently
 - Using JavaScript on both the frontend (React) and backend (Node.js) allows us to share type definitions, utility functions, and data models across both layers, reducing duplication and the risk of frontend and backend having mismatched assumptions about data shapes
+
 Trade offs:
 - Cloud hosting introduces deployment complexity. Environment variables, networking configuration, and service integration all require careful setup and ongoing maintenance that a local server would not
 - Cloud infrastructure carries ongoing hosting costs that will increase as the user base and data volume grow, which is a meaningful consideration for a student team operating without a budget
 
 The database runs on a managed cloud database platform such as MongoDB Atlas or Firebase Firestore (NoSQL).
+
 Benefits:
 - Managed cloud databases provide automatic backups, built-in scaling, and easier maintenance
 - Both MongoDB Atlas and Firebase Firestore have generous free tiers appropriate for a UCI-scoped launch and scale automatically as data volume grows
 - NoSQL document models can be flexible during early development when the data schema is still evolving 
+
 Trade-offs:
 - NoSQL databases provide less rigid structure compared to traditional relational SQL systems, which means data consistency and relationship integrity must be enforced at the application level rather than by the database itself. For CommonGround, this is particularly relevant for the 
 - The relationship between users, tags, and matches would not be linked or enforced automatically
 
 The real-time communication system runs on WebSocket which is compatible cloud servers, enabling persistent client-server connections for live chat and map updates.
+
 Benefits:
 - WebSockets maintain a persistent bidirectional connection between the browser and the server, allowing the server to push new messages and location updates to the client instantly rather than waiting for the client to repeatedly poll for changes.
 - This directly supports CommonGround's two most latency-sensitive features: chat message delivery and live map pin updates, both of which would feel slow or unreliable over standard HTTP request-response cycles.
+
 Trade-offs:
 - Persistent socket connections consume significantly more resources than standard HTTP requests
 
