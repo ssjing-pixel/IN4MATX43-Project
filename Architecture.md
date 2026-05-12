@@ -65,6 +65,72 @@ Trade-offs:
 
 **Communication Protocols**
 
+Describe what messages need to be sent and/or requested from each component or part of the system to other components or parts of the system. Define how those messages will be sent (e.g., HTTP requests, remote procedure calls (RPC), TCP sockets, UDP sockets). 
+
+The CommonGround system consists of two primary components: the Frontend (web browser client) and the Backend Server (cloud-based API and database). Communication between these components uses HTTP requests for standard data operations and WebSockets for real-time features. RPC, TCP sockets, and UDP sockets were considered but not adopted, as HTTP and WebSocket provide sufficient functionality for a web-based application while offering higher-level abstractions that simplify development.
+
+Onboarding quiz:
+- Frontend → Backend Server
+- Protocol: HTTP POST
+- Trigger: User completes interest selection and taps “Continue.”
+- When a new user completes the onboarding quiz, the Frontend requests the Backend to store the user’s chosen display name, optional profile photo, and list of selected interest tags (minimum 1, maximum 10). The Backend responds with a confirmation that the user profile has been created and the system is ready to begin matching.
+
+User Profile&Bio:
+- Frontend → Backend Server
+- Protocol: HTTP PUT
+- Trigger: User saves or updates their profile/bio
+- When a user saves or updates their profile, the Frontend sends an HTTP PUT request to the Backend containing the user’s ID, display name, bio text, optional profile picture URL, and optional age. The Backend validates the inputs, for example, checking that required fields are present and that the bio does not exceed the character limit, and responds with a confirmation that the profile has been saved. If validation fails, the backend responds with an error message indicating which fields need to be corrected.
+
+Range (Location Updates):
+- Frontend → Backend Server
+- Protocol: HTTP POST
+- Trigger: Every 30s when user has location sharing enabled
+- Every 30s while the user has location sharing enabled, the Frontend sends the user’s current GPS coordinates and visibility status (visible or invisible) to the Backend. The Backend uses this data to determine which other users fall within the requesting user’s configured range and share at least one interest. It responds with a list of matched nearby users. If the user is set to invisible, their location is not included in any other user’s results. Location data is not permanently stored on the server.
+
+User-Defined Filtering:
+- Fronted → Backend Server
+- Protocol: HTTP GET
+- Trigger: User applies ot updates interest filters on the map
+- When a user applies or changes their interest filters on the map, the Frontend requests the Backend to return only those nearby users who match all of the selected filter interests within the user’s set range. The Backend responds with a filtered list of matching users. If no users match the criteria, the Backend includes a notification flag so the Frontend can prompt the user to adjust their filters.
+
+Chat:
+A. Sending a chat request
+- Frontend → Backend Server
+- Protocol: HTTP POST
+- Trigger: User A sends a chat request  to User B
+- When a user sends a request to another user, the Frontend sends the sender’s IP and the receiver’s ID to the Backend. The Backend records the pending request and responds with a request ID and a pending status. The receiver is notified of the incoming request.
+
+B. Accepting or declining a chat request
+- Frontend → Backend Server
+- Protocol: HTTP PUT
+- Trigger: User B accepts or declines the request
+- When a user responds to a chat request, the Frontend sends the request ID and the user’s action (accept/decline) to the Backend. If accepted, the Backend creates a new chat channel and responds with the channel ID. If declined, the Backend updates the request status and no chat channel is created.
+
+C. Real-time messaging 
+- Frontend → Backend Chat Service
+- Protocol: WebSocket
+- Trigger: Chat channel is open, user sends a message
+Once a chat channel is open, messages are sent and received via WebSocket, which maintains a persistent two-way connection between the Frontend and the Backend Chat Service. Each message contains the chat channel ID, the sender’s user ID, the message text, and a timestamp. WebSocket is used here instead of HTTP because it allows real-time, low-latency delivery without the need for repeated polling.
+
+Missions:
+A. Fetching Mission Status
+- Frontend → Backend Server
+- Protocol: HTTP GET
+- Trigger: User opens the Mission page
+- When a user navigates to the Mission page, the Frontend requests the Backend to return the user’s current mission list. The Backend responds with each mission’s title, progress, completion status, and points awarded, along with the user’s total accumulated points.
+
+B. Mission Completion Notification
+- Backend Server → Frontend
+- Protocol: WebSocket
+- Trigger: Backend detects a mission condition has been met
+- When the Backend detects that a user has met the conditions for a mission, it immediately pushes a notification to the Frontend via WebSocket. The notification includes the mission title, points awarded, and the user’s updated total points. WebSocket is used here so the notification is delivered instantly without requiring the user to manually refresh the page. In the case of an internet disconnection, the Backend retroactively checks mission completion upon reconnection and delivers any missed notifications at that time.
+
+C. Friends Leaderboard
+- Frontend → Backend Server
+- Protocol: HTTP GET
+- Trigger: User taps “ Friends Leaderboard” on the Missions page
+- When a user opens the Friends Leaderboard on the Missions page, the Frontend requests the Backend to return the top 10 point-earners among the user’s friends list. The Backend responds with each friend’s display name, total points, and the requesting user’s own rank within the list.
+
 
 **Examples of Component Functions and Connector Communications**
 
