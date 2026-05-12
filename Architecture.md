@@ -94,6 +94,7 @@ User-Defined Filtering:
 - When a user applies or changes their interest filters on the map, the Frontend requests the Backend to return only those nearby users who match all of the selected filter interests within the user’s set range. The Backend responds with a filtered list of matching users. If no users match the criteria, the Backend includes a notification flag so the Frontend can prompt the user to adjust their filters.
 
 Chat:
+
 A. Sending a chat request
 - Frontend → Backend Server
 - Protocol: HTTP POST
@@ -113,6 +114,7 @@ C. Real-time messaging
 Once a chat channel is open, messages are sent and received via WebSocket, which maintains a persistent two-way connection between the Frontend and the Backend Chat Service. Each message contains the chat channel ID, the sender’s user ID, the message text, and a timestamp. WebSocket is used here instead of HTTP because it allows real-time, low-latency delivery without the need for repeated polling.
 
 Missions:
+
 A. Fetching Mission Status
 - Frontend → Backend Server
 - Protocol: HTTP GET
