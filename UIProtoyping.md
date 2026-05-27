@@ -5,7 +5,7 @@ https://www.figma.com/design/gpWFyWbfQVRwQB2Ea8E2Le/Group-3?node-id=4-319&t=qdZU
 
 **Heuristic Evaluation**
 
-Visibility of system status
+##Visibility of system status
 
 Our UI aims to make the system status obvious to users through clear titles and messaging. Each page of our UI has a title at the top indicating to the user what they are accessing at the moment, such as “Welcome to CommonGround” for the account creation page, “Your Profile” for the user’s profile page, and “Friends” for the user’s friends page. We also use intuitive markers to indicate status. For example, completed missions are signaled with checkmarks and nearby friends have a green dot with the words “exploring nearby” to indicate nearness.
 
