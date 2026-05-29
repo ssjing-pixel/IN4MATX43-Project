@@ -1,5 +1,13 @@
 # IN4MATX43-Project Meeting Documentation
 
+Meeting #8
+Attendees: Elaine Kao, Gisele Dao, Stephanie Jing, Xinchang Tong
+Absent: Yuxuan Huang
+Date: 5/29/26, 9am
+Type: In-Person
+Location: Friday Discussion Week 9
+Summary: We spent the duration of the discussion watching our classmates' presentations of their version of a find my friends app. We also reconvened over our latest completed homework: UI/Prototyping. We had split up the work: Stephanie made the figma website UI mockups, Elaine made the annotations for the website, Gisele wrote the first half of the heuristic evaluation, and Xinchange wrote the second half of the heuristic evaluation. After discussing our previous work, we began on homework 4, discussing the work necessary for our testing phase.
+
 Meeting #7
 Attendees: Elaine Kao, Gisele Dao, Stephanie Jing, Xinchang Tong
 Absent: Yuxuan Huang
