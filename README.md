@@ -1,5 +1,13 @@
 # IN4MATX43-Project Meeting Documentation
 
+Meeting #9
+Attendees: Elaine Kao, Gisele Dao, Xinchang Tong
+Absent: Stephanie Jing, Yuxuan Huang
+Date: 5/31/26, 1pm
+Type: In-Person
+Location: Facetime
+Summary: We discussed the requirements and specific parts for the testing homework, dialing in on what testing components we wanted to include and splitting up the work evenly across members. We also made a schedule of deadlines for when parts of homework 4 should be completed for other members to do their necessary parts. Stephanie was absent so we communicated our meeting results to her over text. We scheduled a final wrap-up meeting for the homework on Tuesday, 6/2/2026 to review the homework before submission.
+
 Meeting #8
 Attendees: Elaine Kao, Gisele Dao, Stephanie Jing, Xinchang Tong
 Absent: Yuxuan Huang
