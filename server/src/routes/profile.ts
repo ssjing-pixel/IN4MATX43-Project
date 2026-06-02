@@ -17,7 +17,8 @@ router.get('/:userId', (req: Request, res: Response) => {
 
 router.put('/:userId', (req: Request, res: Response) => {
   const db = getDb();
-  const { displayName, bio, avatar, interests, range_miles, visible } = req.body;
+  const { displayName, display_name, bio, avatar, interests, range_miles, visible } = req.body;
+  const resolvedName = displayName ?? display_name;
 
   const user = db.prepare('SELECT id FROM users WHERE id = ?').get(req.params.userId);
   if (!user) return res.status(404).json({ error: 'User not found' });
@@ -25,7 +26,7 @@ router.put('/:userId', (req: Request, res: Response) => {
   const updates: string[] = [];
   const params: any[] = [];
 
-  if (displayName !== undefined) { updates.push('display_name = ?'); params.push(displayName); }
+  if (resolvedName !== undefined) { updates.push('display_name = ?'); params.push(resolvedName); }
   if (bio !== undefined) { updates.push('bio = ?'); params.push(bio); }
   if (avatar !== undefined) { updates.push('avatar = ?'); params.push(avatar); }
   if (interests !== undefined) { updates.push('interests = ?'); params.push(JSON.stringify(interests)); }
