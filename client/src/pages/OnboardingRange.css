@@ -1,0 +1,110 @@
+.range-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 40px 24px 40px;
+  align-items: center;
+}
+
+.range-page > * {
+  width: 100%;
+  max-width: 500px;
+}
+
+.range-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.range-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.range-header p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.range-display {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.range-number {
+  font-size: 80px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.range-unit {
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.range-slider-wrap {
+  margin-bottom: 32px;
+}
+
+.range-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--border);
+  outline: none;
+  margin-bottom: 8px;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(74,124,89,0.4);
+}
+
+.range-slider::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+  border: none;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.privacy-card {
+  background: var(--card-bg);
+}
+
+.privacy-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.privacy-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.privacy-content p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}

@@ -71,3 +71,63 @@ Date: 4/10/26
 Type: In-Person
 Location: Friday Discussion Section Week 2
 Summary:  Met team members and exchanged contact information, making a Messsages and Discord groupchat. Learned project details and discussed general implementation.
+
+---
+
+# CommonGround — Development Setup
+
+## Quick Start
+
+```bash
+# 1. Install all dependencies (run once)
+npm run install:all
+
+# 2. Start both server and client
+npm run dev
+```
+
+- **Frontend:** http://localhost:5173
+- **Backend API:** http://localhost:3001
+- **Demo login:** username `demo_user`, password `password123`
+
+## Running Separately
+
+```bash
+# Server only (port 3001)
+npm run server
+
+# Client only (port 5173)
+npm run client
+```
+
+## Requirements
+
+- Node.js 18+ 
+- npm 8+
+
+## Tech Stack
+
+- **Frontend:** React + TypeScript (Vite), Leaflet.js (OpenStreetMap)
+- **Backend:** Node.js + Express + Socket.io
+- **Database:** SQLite (auto-created at `server/commonground.db` on first run)
+- **Auth:** JWT tokens stored in localStorage
+
+## Project Structure
+
+```
+client/          React frontend
+server/          Node.js backend
+  src/
+    db/          SQLite schema + seed data
+    routes/      auth, profile, friends, chat, missions, location
+```
+
+## Features
+
+- Sign up / Log in (JWT auth)
+- Onboarding: interest selection (up to 10), discovery range picker
+- Home: live map (Leaflet/OpenStreetMap) with nearby user pins + discovery radius
+- Missions & Badges panel
+- Profile: edit display name, bio, interests, visibility, discovery range
+- Friends: search users, send/accept requests, see shared interests
+- Chat: real-time messaging via Socket.io
