@@ -20,6 +20,24 @@ This is CommonGround’s overarching quality strategy. The plan describes what w
 |Backend API endpoints (all HTTP routes)|All routes must validate inputs and return correct status codes to prevent silent data corruption or unhandled crashes.|
 |SQLite database operations|This is the actual database in use after replacing MongoDB, so its correctness underpins every feature in the app.|
 
+|Out of scope|Why Excluded|
+|---|---|
+|Leaflet.js map tile rendering|This is a third-party library with its own test suite, so we mock its output and test only our own business logic.|
+|Google/ Facebook/ Instagram OAuth login|These are third-party authentication services that we cannot control, so we mock their responses rather than testing them directly.|
+|Browser compatibility (Safari, Firefox)|Only Chrome is officially supported for this release due to time constraints, and this decision is documented.|
+|Mobile native app behavior|CommonGround is a web app only, so native app testing does not apply to this project.|
+|Email delivery/ external push notifications|No external email service is integrated in the current version, making this out of scope by default.|
+|Admin dashboard or moderation tools|These tools are not part of the current feature set and were never in scope for this release.|
+|Accessibility/ screen reader compliance|This is noted as a future area for improvement and has been excluded from this release due to time constraints.|
+|“Refer Us to Friends” referral banner|This is a marketing feature visible in the Figma Friends screen but not a core functional requirement for this release.|
+
+
+
+
+
+
+
+
 **Reflection**
 
 
