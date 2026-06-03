@@ -96,25 +96,6 @@ This is CommonGround’s overarching quality strategy. The plan describes what w
 |Gisele Dao|Website implementation: building and running the prototype (Leaflet.js, SQLite) that the test suite runs against|
 |Stephanie Jing|Reflection (Part 3): post-implementation reflection on bugs caught, hardest things to test, and next steps|
 
-**Reflection**
-
-**What did your tests catch that you missed before?**
-
-The integration tests caught a real bug in the missions system. When triggered on a fresh in-memory database without the correct pre-seeded state, the endpoint awarded points incorrectly. This wasn’t visible during manual testing because the development database already has the right seed data. The test’s clean-slate setup exposed that the route was implicitly depending on existing rows, which is a data integrity bug invisible in production until a user hit the edge case.
-
-**What was hardest to test, and why?**
-
-The hardest components were friends.ts and chats.ts, for a structural reason. Both require two authenticated users interacting simultaneously. Simulating a second user accepting a chat request requires either parallel test clients or a mock that accurately represents a second session’s state machine. Socket.io tests depend on persistent connections, so without that infrastructure the chat state transitions (pending → accepted → active) flagged as highest-priority in the plan were never exercised.
-
-**What test would you add next?**
-
-The invisible mode test. It was rated the highest-priority risk in the strategic plan and is mechanically straightforward: set visible = false, POST a location update, call /api/nearby as a second user, and assert the invisible user doesn’t appear. The fact that this wasn’t shipped despite being explicitly planned makes it the clearest gap.
-
-**Where did Claude help and where did it get things wrong?**
-
-Claude was most useful for scaffolding quickly like generating the testApp.ts helper, in-memory SQLite setup, and boilerplate for auth and profile tests. Where it fell short was understanding runtime coupling. It would produce tests that looked correct but assumed routes were stateless when they depended on session middleware. Those required reading the actual implementation to debug, which Claude couldn’t do without full file context.
-
-
 **Part 2 — Tests Implemented + Report**
 
 **2.3 Tests by category**
@@ -180,3 +161,20 @@ routes/location.ts is only 15% covered as it requires pre-seeded geographic loca
 |Light load test for concurrent location updates using k6 or a custom script|Not shipped|We would simulate multiple users sending location pings simultaneously to surface race conditions the unit tests cannot catch but had little time to complete|
 |Invisible mode integration test verifying users with visible=false are excluded from all map results|Not shipped|We would add a test that sets a user invisible, posts a nearby location, and asserts they do not appear in any other user's /api/nearby response|
 
+**Reflection**
+
+**What did your tests catch that you missed before?**
+
+The integration tests caught a real bug in the missions system. When triggered on a fresh in-memory database without the correct pre-seeded state, the endpoint awarded points incorrectly. This wasn’t visible during manual testing because the development database already has the right seed data. The test’s clean-slate setup exposed that the route was implicitly depending on existing rows, which is a data integrity bug invisible in production until a user hit the edge case.
+
+**What was hardest to test, and why?**
+
+The hardest components were friends.ts and chats.ts, for a structural reason. Both require two authenticated users interacting simultaneously. Simulating a second user accepting a chat request requires either parallel test clients or a mock that accurately represents a second session’s state machine. Socket.io tests depend on persistent connections, so without that infrastructure the chat state transitions (pending → accepted → active) flagged as highest-priority in the plan were never exercised.
+
+**What test would you add next?**
+
+The invisible mode test. It was rated the highest-priority risk in the strategic plan and is mechanically straightforward: set visible = false, POST a location update, call /api/nearby as a second user, and assert the invisible user doesn’t appear. The fact that this wasn’t shipped despite being explicitly planned makes it the clearest gap.
+
+**Where did Claude help and where did it get things wrong?**
+
+Claude was most useful for scaffolding quickly like generating the testApp.ts helper, in-memory SQLite setup, and boilerplate for auth and profile tests. Where it fell short was understanding runtime coupling. It would produce tests that looked correct but assumed routes were stateless when they depended on session middleware. Those required reading the actual implementation to debug, which Claude couldn’t do without full file context.
