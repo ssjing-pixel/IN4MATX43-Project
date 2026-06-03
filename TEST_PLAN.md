@@ -13,6 +13,7 @@ Last updated: 2026-06-02 (commit 44d425d)
 
 2.4 Where the tests live + how to run them
 
+```
 server/
 
   tests/
@@ -31,7 +32,9 @@ server/
     helpers/
     
       testApp.ts
+```
 
+```
 bash
 
 git clone https://github.com/ssjing-pixel/IN4MATX43-Project.git
@@ -45,6 +48,7 @@ cd server
 npm install
 
 npm test
+```
 
 |Category|Time|Where It Runs|
 |--------|----|-------------|
