@@ -14,23 +14,36 @@ Last updated: 2026-06-02 (commit 44d425d)
 2.4 Where the tests live + how to run them
 
 server/
+
   tests/
+  
     unit/
+    
       auth.unit.test.ts
       location.unit.test.ts
+      
     integration/
+    
       auth.integration.test.ts
       profile.integration.test.ts
       missions.integration.test.ts
+      
     helpers/
+    
       testApp.ts
 
 bash
+
 git clone https://github.com/ssjing-pixel/IN4MATX43-Project.git
+
 cd IN4MATX43-Project
+
 git checkout claude/loving-cray-aKudC
+
 cd server
+
 npm install
+
 npm test
 
 |Category|Time|Where It Runs|
