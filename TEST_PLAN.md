@@ -44,7 +44,7 @@ This is CommonGround’s overarching quality strategy. The plan describes what w
 - Unit test coverage of at least 50% on backend utility and logic functions
 - All integration tests pass on a fresh clone with a seeded test database
 
-**1.3 Risks & Priorities - Where are bugs most likely or most costly?
+**1.3 Risks & Priorities - Where are bugs most likely or most costly?**
 
 |Area|Why it's risky/costly|Priority (H/M/L)|
 |---|---|---|
