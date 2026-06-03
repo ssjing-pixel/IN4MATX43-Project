@@ -88,12 +88,12 @@ This is CommonGround’s overarching quality strategy. The plan describes what w
 - CI testing runs on Ubuntu through GitHub Actions, while local development is done on team members’ own macOS or Windows machines.
 - The test suite can run on a fresh project clone without needing any local secrets or machine-specific configuration files.
 
-**Team Roles**
+**1.6 Team Roles**
 |Member|Owns which test categories/ components|
 |---|---|
 |Xinchang Tong|Test plan document (part1): overall quality strategy, scope definition, risk analysis, and test approach|
 |Elaine Kao|Test implementation (part2): writing and running unit and integration tests, generating the coverage report|
-|Gisele Dao|Website implementation: building the running prototype (Leaflet.js, SQLite) that the test suite runs against|
+|Gisele Dao|Website implementation: building and running the prototype (Leaflet.js, SQLite) that the test suite runs against|
 |Stephanie Jing|Reflection (Part 3): post-implementation reflection on bugs caught, hardest things to test, and next steps|
 
 **Reflection**
