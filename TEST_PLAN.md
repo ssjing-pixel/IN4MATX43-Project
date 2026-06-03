@@ -62,6 +62,7 @@ This is CommonGround’s overarching quality strategy. The plan describes what w
 |Scrolling/ pagination on long friends lists|At the current small scale, this has minimal user impact and can be fixed without touching any core logic.|L|
 
 **1.4 Strategy - Test types and approach per component**
+
 **Definitions:**
 - Unit test: A test that checks one function or module by itself, while replacing things like the database, network, or other modules with mocks or stubs to make sure the code works correctly on its own.
 - Integration test: A test that checks whether multiple components work correctly together, such as an API route connecting to a test database, to make sure different parts of the system communicate properly.
